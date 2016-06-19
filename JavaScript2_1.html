@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript2 Q1</title>
+</head>
+<body>
+<input type="button" style="background:blue" onclick="change()" type="button" value="Like" id="myButton1" />
+
+<script type="text/javascript">
+	   var count = 0;
+    function change() {
+        var property = document.getElementById('myButton1');
+        if (count == 0) {
+            property.style.backgroundColor = "red"
+            property.value = "Unlike"
+            count = 1;        
+        }
+        else {
+            property.style.backgroundColor = "blue"
+            property.value = "Like"
+            count = 0;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- 
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>04 - Numbers Only Field</title>
+    <script src="JavaScript2_3.js"></script>
+</head>
+<body>
+    <form action="#" method="get">
+        <input id="txt" type="text" name="txt">
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript2 Q3</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            window.onload = function(){
+            	var ip = document.form1.input;
+                document.form1.input.onchange = check;
+                function check(){
+                     if (isNaN(parseInt(ip.value, 10))){
+                        ip.innerHTML = ip.value;
+                        ip.readOnly = true;
+                        setTimeout(function(){            
+                           ip.readOnly = false;
+                        }, 10000);
+                      }
+                 }
+            }
+        </script>
+        <style type="text/css">
+                input[readonly] {
+                   background-color: red;
+                }
+        </style>
+    </head>
+    <body>
+        <form name="form1">
+            <input type="text" name="input">
+        </form>
+    </body>
+</html>
